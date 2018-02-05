@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="js/echarts.min.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    </head>
+    <body style="background-color:#161627;">
+	<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+		<div id="main1" style="width: auto;height:500px;background-color:#000;">
+		</div>
+    <script>
+    // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main1'));
+    	// Schema:
+// date,AQIindex,PM2.5,PM10,CO,NO2,SO2
+var dataBJ = [
+    [167,176,160,4.8,108],
+];
+
+var dataGZ = [
+    [178,198,157,3.9,108],
+];
+
+var dataSH = [
+    [116,87,131,1.7,84],
+];
+
+var lineStyle = {
+    normal: {
+        width: 1,
+        opacity: 0.5
+    }
+};
+
+option = {
+    backgroundColor: '#161627',
+    title: {
+        text: '早高峰出行时间（7:40-9:07）',
+        left: 'center',
+        textStyle: {
+            color: '#eee'
+        }
+    },
+    legend: {
+        bottom: 35,
+        data: ['高档车', '中档车', '经济型车'],
+        itemGap: 20,
+        textStyle: {
+            color: '#fff',
+            fontSize: 14
+        },
+        selectedMode: 'single'
+    },
+    // visualMap: {
+    //     show: true,
+    //     min: 0,
+    //     max: 20,
+    //     dimension: 6,
+    //     inRange: {
+    //         colorLightness: [0.5, 0.8]
+    //     }
+    // },
+    radar: {
+        indicator: [
+            {name: '公司企业', max: 300},
+            {name: '政府', max: 250},
+            {name: '购物', max: 300},
+            {name: '医疗', max: 5},
+            {name: '科教文化', max: 200},
+            // {name: 'SO2', max: 100}
+        ],
+        shape: 'circle',
+        splitNumber: 5,
+        name: {
+            textStyle: {
+                // color: 'rgb(238, 197, 102)'
+                color:"#f35e0c"            }
+        },
+        splitLine: {
+
+            lineStyle: {
+
+                color: [
+                    // 'rgba(255, 0, 0, 0.6)', 'rgba(255, 0, 0, 0.9)',
+                    // 'rgba(238, 197, 102, 0.4)', 'rgba(238, 197, 102, 0.6)',
+                    // 'rgba(238, 197, 102, 0.8)', 'rgba(238, 197, 102, 1)'
+                    "#622503","#622503",
+
+
+                ].reverse()
+            }
+        },
+        splitArea: {
+            show: false
+        },
+        axisLine: {
+            lineStyle: {
+                color: 'rgba(238, 197, 102, 0.5)'
+            }
+        }
+    },
+    series: [
+        {
+            name: '高档车',
+            type: 'radar',
+            lineStyle: lineStyle,
+            data: dataBJ,
+            symbol: 'none',
+            itemStyle: {
+                normal: {
+                    color: '#ff0332'
+                }
+            },
+            areaStyle: {
+                normal: {
+                    opacity: 0.5
+                }
+            }
+        },
+        {
+            name: '中档车',
+            type: 'radar',
+            lineStyle: lineStyle,
+            data: dataSH,
+            symbol: 'none',
+            itemStyle: {
+                normal: {
+                    // color: 'rgba(0, 0, 255, 0.6)'
+                    color:"#f4ec08"
+                }
+            },
+            areaStyle: {
+                normal: {
+                    opacity: 0.5
+                }
+            }
+        },
+        {
+            name: '经济型车',
+            type: 'radar',
+            lineStyle: lineStyle,
+            data: dataGZ,
+            symbol: 'none',
+            itemStyle: {
+                normal: {
+                    color: '#03ff56'
+                }
+            },
+            areaStyle: {
+                normal: {
+                    opacity: 0.5
+                }
+            }
+        }
+    ]
+};
+// 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+    </body>
+</html>

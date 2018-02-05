@@ -1,0 +1,209 @@
+/*
+* @Author: ly
+* @Date:   2017-01-16 11:09:18
+* @Last Modified by:   ly
+* @Last Modified time: 2017-01-16 11:41:16
+*/
+*{
+    		margin:0;
+    		padding:0;
+    	}
+    	/* <!-- 标题与介绍 --> */
+		.main3_title{
+			font-family: "微软雅黑";
+			font-size:16px;
+			padding: 10px;
+			margin:0 15px;
+			/* background-color: #03c4fc; */
+			background: linear-gradient(to right,#52be7f,#99FF99,#BFFFBF);;
+			border-top: 25px solid #000;
+			border-radius: 2px;
+			position: relative;
+		}
+		.xiuxian{
+			position: absolute;
+			right: -25px;
+			top: -23px;
+			width: 100px;
+			height:100px;
+		}
+		.main3_tip{
+			padding:20px;
+			font-style: 16px;
+			line-height: 25px;
+			color:#fdfeff;
+		}
+		.main3_pic{
+			width: 100%;
+			height: auto;
+		}
+		.main3_pic img{
+			width: 155px;
+			height: 165px;
+		}
+		/* 图片动画 */
+		/* 1斜线 */
+		.main3_line{
+		  position:relative;
+		  /* margin:50px auto; */
+		  width:100px;
+		  height:100px;
+		  box-sizing:border-box;
+		  /* border:1px solid #333;   */
+		  /* // background-color:#333; */
+		  line-height:120px;
+		  text-indent:5px;
+		}
+
+		.main3_line::before{
+		  content:"";
+		  position:absolute;
+		  left:120px;
+		  top:-177px;
+		  width:100%;
+		  height:50px;
+		  box-sizing:border-box;
+		  border-bottom:1px dashed #DBE3EE;
+		  transform-origin:bottom center;
+		  transform:rotateZ(-15deg) scale(1.05);
+		  /* animation:slash 1s infinite ease; */
+		}
+
+		/* @keyframes slash{
+		  0%{
+		    transform:rotateZ(0deg) scale(1);
+		  }
+		  30%{
+		    transform:rotateZ(-15deg) scale(1);
+		  }
+		  60%{
+		    transform:rotateZ(-15deg) scale(1.05);
+		  }
+		  100%{
+		    transform:rotateZ(-15deg) scale(1.05);
+		  }
+		} */
+		.main3_one{
+			position: absolute;
+			top: 245px;
+			left: 222px;
+			width: 50px;
+			height: 35px;
+			text-align: center;
+			padding-top:15px; 
+			background-color: blue;
+			border-radius:50%; 
+		}
+		.main3_one:hover{
+			animation:hover 2s none ease;
+		}
+		@keyframes hover{
+			0%{
+		    transform: rotateZ(0deg) scale(1);
+		  }
+		  100%{
+		    transform:rotateZ(360deg) scale(2);
+		  }
+		}
+		.container1{
+			position: relative;
+		}
+		#cn-button1{
+			position: absolute;
+			bottom:0px;
+			left: 167px;
+		}
+		.benchi{
+			width: 100%;
+			height:75px;
+			padding:0 5px;
+			 display: flex;
+		}
+		.bmw{
+			width: 100%;
+			height:80px;
+			padding:0 5px;
+			 display: flex;
+		}
+		.woerwo{
+			width: 100%;
+			height:80px;
+			padding:0 5px;
+			 display: flex;
+		}
+		.aodi,.infinite,.leikesasi,.kaidi{
+			width: 100%;
+			height:80px;
+			padding:0 5px;
+			display: flex;
+		}
+		.benchi li:nth-child(1),.benchi li:nth-child(2),.benchi li:nth-child(3),.benchi li:nth-child(4){
+			float: left;
+			width:90px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #61A0A8;
+			flex:25%;
+		}
+		.bmw li:nth-child(1),.bmw li:nth-child(2),.bmw li:nth-child(3),.bmw li:nth-child(4){
+			float: left;
+			width:90px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #de7d43;
+			flex:25%;
+		}
+		.woerwo li:nth-child(1),.woerwo li:nth-child(2),.woerwo li:nth-child(3),.woerwo li:nth-child(4),.woerwo li:nth-child(5),.woerwo li:nth-child(6){
+			float: left;
+			width:90px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #7dd285;
+			flex:16.5%;
+		}
+		.aodi li:nth-child(1),.aodi li:nth-child(2),.aodi li:nth-child(3),.aodi li:nth-child(4){
+			float: left;
+			width:90px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #eb8e8e;
+			flex:25%;
+		}
+		.infinite li:nth-child(1),.infinite li:nth-child(2),.infinite li:nth-child(3),.infinite li:nth-child(4),.infinite li:nth-child(5){
+			float: left;
+			width:90px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #b98eda;
+			flex:20%;
+		}
+		.leikesasi li:nth-child(1),.leikesasi li:nth-child(2),.leikesasi li:nth-child(3),.leikesasi li:nth-child(4){
+			float: left;
+			width:90px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #f8ea70;
+			flex:25%;
+		}
+		.kaidi li:nth-child(1){
+			float: left;
+			width:90px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #9a98ec;
+			flex:25%;
+		}

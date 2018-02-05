@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component2.css" />
+		<script src="js/modernizr-2.6.2.min.js"></script>
+    </head>
+    	<style>
+    	*{
+    		margin:0;
+    		padding:0;
+    	}
+    	/* <!-- 标题与介绍 --> */
+		.main3_title{
+			font-family: "微软雅黑";
+			font-size:16px;
+			padding: 10px;
+			margin:0 15px;
+			/* background-color: #03c4fc; */
+			background: linear-gradient(to right,#52be7f,#99FF99,#BFFFBF);;
+			border-top: 25px solid #000;
+			border-radius: 2px;
+			position: relative;
+		}
+		.xiuxian{
+			position: absolute;
+			right: -25px;
+			top: -23px;
+			width: 100px;
+			height:100px;
+		}
+		.main3_tip{
+			padding:20px;
+			font-style: 16px;
+			line-height: 25px;
+			color:#fdfeff;
+		}
+		.main3_pic{
+			width: 100%;
+			height: auto;
+		}
+		.main3_pic img{
+			width: 155px;
+			height: 165px;
+		}
+		/* 图片动画 */
+		/* 1斜线 */
+		.main3_line{
+		  position:relative;
+		  /* margin:50px auto; */
+		  width:100px;
+		  height:100px;
+		  box-sizing:border-box;
+		  /* border:1px solid #333;   */
+		  /* // background-color:#333; */
+		  line-height:120px;
+		  text-indent:5px;
+		}
+
+		.main3_line::before{
+		  content:"";
+		  position:absolute;
+		  left:120px;
+		  top:-177px;
+		  width:100%;
+		  height:50px;
+		  box-sizing:border-box;
+		  border-bottom:1px dashed #DBE3EE;
+		  transform-origin:bottom center;
+		  transform:rotateZ(-15deg) scale(1.05);
+		  /* animation:slash 1s infinite ease; */
+		}
+
+		/* @keyframes slash{
+		  0%{
+		    transform:rotateZ(0deg) scale(1);
+		  }
+		  30%{
+		    transform:rotateZ(-15deg) scale(1);
+		  }
+		  60%{
+		    transform:rotateZ(-15deg) scale(1.05);
+		  }
+		  100%{
+		    transform:rotateZ(-15deg) scale(1.05);
+		  }
+		} */
+		.main3_one{
+			position: absolute;
+			top: 245px;
+			left: 222px;
+			width: 50px;
+			height: 35px;
+			text-align: center;
+			padding-top:15px; 
+			background-color: blue;
+			border-radius:50%; 
+		}
+		.main3_one:hover{
+			animation:hover 2s none ease;
+		}
+		@keyframes hover{
+			0%{
+		    transform: rotateZ(0deg) scale(1);
+		  }
+		  100%{
+		    transform:rotateZ(360deg) scale(2);
+		  }
+		}
+		.container1{
+			position: relative;
+		}
+		#cn-button1{
+			position: absolute;
+			bottom:0px;
+			left: 167px;
+		}
+		.benchi{
+			width: 100%;
+			height:75px;
+			/* margin-left:25px; */
+			padding:0 5px;
+			 display: flex;
+		}
+		.bmw{
+			width: 100%;
+			height:80px;
+			/* margin-left:25px; */
+			padding:0 5px;
+			 display: flex;
+		}
+		.woerwo{
+			width: 100%;
+			height:80px;
+			/* margin-left:25px; */
+			padding:0 5px;
+			 display: flex;
+		}
+		.aodi,.infinite,.leikesasi,.kaidi{
+			width: 100%;
+			height:80px;
+			/* margin-left:25px; */
+			padding:0 5px;
+			display: flex;
+		}
+		.benchi li:nth-child(1),.benchi li:nth-child(2),.benchi li:nth-child(3),.benchi li:nth-child(4){
+			float: left;
+			width:90px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #61A0A8;
+			flex:25%;
+		}
+		.bmw li:nth-child(1),.bmw li:nth-child(2),.bmw li:nth-child(3),.bmw li:nth-child(4){
+			float: left;
+			width:90px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #de7d43;
+			flex:25%;
+		}
+		.woerwo li:nth-child(1),.woerwo li:nth-child(2),.woerwo li:nth-child(3),.woerwo li:nth-child(4),.woerwo li:nth-child(5),.woerwo li:nth-child(6){
+			float: left;
+			width:90px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #7dd285;
+			flex:16.5%;
+		}
+		.aodi li:nth-child(1),.aodi li:nth-child(2),.aodi li:nth-child(3),.aodi li:nth-child(4){
+			float: left;
+			width:90px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #eb8e8e;
+			flex:25%;
+		}
+		.infinite li:nth-child(1),.infinite li:nth-child(2),.infinite li:nth-child(3),.infinite li:nth-child(4),.infinite li:nth-child(5){
+			float: left;
+			width:90px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #b98eda;
+			flex:20%;
+		}
+		.leikesasi li:nth-child(1),.leikesasi li:nth-child(2),.leikesasi li:nth-child(3),.leikesasi li:nth-child(4){
+			float: left;
+			width:90px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #f8ea70;
+			flex:25%;
+		}
+		.kaidi li:nth-child(1){
+			float: left;
+			width:90px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			border-radius: 50%;
+			background-color: #9a98ec;
+			flex:25%;
+		}
+    	</style>
+    <body>
+		<div id="main3" style="width: 100%;height:1000px;margin-top:0;">
+	    <!-- background-color:#151515; -->
+	    	<!-- 标题与介绍 -->
+			<div class="main3_title">
+				<div>奔驰车主爱火锅</div><br>
+				<div>宝马车主爱购物，凯迪拉克偏好洗浴场所</div>
+				<img class="xiuxian" src="images/xiuxian0.png" alt="">
+			</div>
+			<p class="main3_tip">高德地图交通大数据分析了七大汽车品牌车主行为，发现用户出行偏好各不同，明显是不同人群的出现偏好，如奔驰车主偏土豪，宝马车主爱购物，沃尔沃车主偏文艺，凯迪拉克偏好洗浴场所，奥迪车主多机关单位，英菲尼迪多好娱乐项目，雷克萨斯多去工厂。</p>
+			<div style="text-align:center;">
+				<img src="images/benchi_r1_c2.jpg" style="width:85px;height:80px;" alt="">
+			</div>
+			<ul class="benchi">
+				<li>别墅</li>
+				<li>高级酒店</li>
+				<li>飞机场</li>
+				<li>火锅店</li>
+			</ul>
+			<div style="text-align:center;">
+				<img src="images/bmw.png" style="width:75px;height:75px;" alt="">
+			</div>
+			<ul class="bmw">
+				<li>住宅区</li>
+				<li>商业园区</li>
+				<li>步行街</li>
+				<li>购物中心</li>
+			</ul>
+			<div style="text-align:center;">
+				<img src="images/woerwo.png" style="width:75px;height:75px;" alt="">
+			</div>
+			<ul class="woerwo">
+				<li>剧院</li>
+				<li>外国机构</li>
+				<li>寺庙道馆</li>
+				<li>世界遗产</li>
+				<li>动植物园</li>
+				<li>老字号</li>
+			</ul>
+			<div style="text-align:center;">
+				<img src="images/aodi.png" style="width:200px;height:75px;" alt="">
+			</div>
+			<ul class="aodi">
+				<li>国家级景点</li>
+				<li>高等院校</li>
+				<li>政府机构</li>
+				<li>三级甲等医院</li>
+			</ul>
+			<div style="text-align:center;">
+				<img src="images/infinite.png" style="width:100px;height:75px;" alt="">
+			</div>
+			<ul class="infinite">
+				<li>公司</li>
+				<li>外国餐厅</li>
+				<li>娱乐场所</li>
+				<li>整形医院</li>
+				<li>电影院</li>
+			</ul>
+			<div style="text-align:center;">
+				<img src="images/leikesasi.png" style="width:100px;height:75px;" alt="">
+			</div>
+			<ul class="leikesasi">
+				<li>小学</li>
+				<li>幼儿园</li>
+				<li>工厂</li>
+				<li>海鲜酒楼</li>
+			</ul>
+			<div style="text-align:center;">
+				<img src="images/kaidi.png" style="width:100px;height:75px;" alt="">
+			</div>
+			<ul class="kaidi">
+				<li>洗浴推拿</li>
+			</ul>
+			<!-- <div class="container">
+				<div class="component">
+					<button class="cn-button" id="cn-button">
+						<img src="images/benchi_r1_c2.jpg" style="width:75px;height:75px;" alt="">
+					</button>
+					<div class="cn-wrapper" id="cn-wrapper">
+						<ul>
+							<li><a href="#"><span>别墅</span></a></li>
+							<li><a href="#"><span>高级酒店</span></a></li>
+							<li><a href="#"><span>飞机场</span></a></li>
+							<li><a href="#"><span>火锅店</span></a></li>
+							<!-- <li><a href="#"><span>Plugins</span></a></li>
+							<li><a href="#"><span>Contact</span></a></li>
+							<li><a href="#"><span>Follow</span></a></li> -->
+			<!-- 			 </ul>
+					</div>
+				</div>
+			</div> -->
+
+		</div>
+    </body>
+    	<script src="js/polyfills.js"></script>
+		<script src="js/demo2.js"></script>
+</html>

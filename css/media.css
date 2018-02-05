@@ -1,0 +1,11 @@
+/*
+* @Author: ly
+* @Date:   2017-01-16 09:48:35
+* @Last Modified by:   ly
+* @Last Modified time: 2017-01-16 10:03:23
+*/
+@media screen and (max-width: 320px ) {
+   #swipeWrapper .swipeBody div .global{
+   		font-size:30px;
+   }
+}
